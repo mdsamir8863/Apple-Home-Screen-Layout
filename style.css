@@ -1,0 +1,62 @@
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+
+ html,
+ body {
+     height: 100vh;
+     width: 100%;
+ }
+
+ ::-webkit-scrollbar {
+     display: none;
+ }
+
+ section {
+     width: 100%;
+     height: 100vh;
+     background-color: rgb(37, 32, 32);
+     background-image: url(./bg.jpg);
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+     position: relative;
+     display: flex;
+     justify-content: center;
+     margin: auto;
+ }
+
+ .icon-container {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-wrap: wrap;
+     position: absolute;
+     margin: auto;
+     bottom: 2rem;
+ }
+
+
+ .icon {
+     transition: transform .2s;
+     padding: 10px;
+     display: flex;
+     margin: auto;
+     align-items: center;
+     justify-content: center;
+
+ }
+
+ .icon img {
+     height: 3.1rem;
+ }
+
+ .icon:hover {
+     transform: scale(1.3) translateY(-15px);
+ }
+
+ .icon:has(+ .icon:hover),
+ .icon:hover+.icon {
+     transform: scale(1.1) translateY(-5px);
+ }
